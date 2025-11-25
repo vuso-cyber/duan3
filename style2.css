@@ -1,0 +1,90 @@
+/* Đặt font và màu nền */
+body {
+  font-family: "Segoe UI", Tahoma, sans-serif;
+  background: linear-gradient(120deg, #84fab0, #8fd3f4);
+  margin: 0;
+  padding: 0;
+}
+
+/* Container chính */
+.container {
+  background: white;
+  max-width: 500px;
+  margin: 60px auto;
+  padding: 30px 40px;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Tiêu đề */
+h1 {
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 25px;
+}
+
+/* Form chung */
+.form-group {
+  margin-bottom: 18px;
+}
+
+/* Label */
+label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #34495e;
+}
+
+/* Input & select & textarea */
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 15px;
+  box-sizing: border-box;
+  transition: 0.3s;
+}
+
+/* Hiệu ứng focus */
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: #2ecc71;
+  outline: none;
+  box-shadow: 0 0 5px rgba(46, 204, 113, 0.4);
+}
+
+/* 2 ô cùng hàng */
+.form-inline {
+  display: flex;
+  gap: 10px;
+}
+
+/* Nút */
+.btn {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(135deg, #2ecc71, #27ae60);
+  border: none;
+  color: white;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: linear-gradient(135deg, #27ae60, #1e8449);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  color: white;
+  margin-top: 30px;
+  font-size: 14px;
+}

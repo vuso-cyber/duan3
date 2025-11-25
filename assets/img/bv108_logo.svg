@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="100" viewBox="0 0 400 100" role="img" aria-label="Logo Bệnh viện 108">
+  <defs>
+    <style type="text/css"><![CDATA[
+      .brand { font-family: 'Poppins', Arial, sans-serif; font-weight: 600; font-size: 28px; fill: #0b2e4f; }
+      .tag  { font-family: 'Poppins', Arial, sans-serif; font-weight: 400; font-size: 12px; fill: #5a6b80; }
+    ]]></style>
+  </defs>
+
+  <!-- Symbol: rounded square with medical cross -->
+  <rect x="12" y="12" width="64" height="64" rx="12" ry="12" fill="#1e88e5"/>
+  <g transform="translate(12,12)">
+    <rect x="18" y="10" width="28" height="44" rx="4" ry="4" fill="#ffffff" opacity="0"/>
+    <!-- white cross -->
+    <rect x="26" y="18" width="12" height="28" rx="2" ry="2" fill="#ffffff"/>
+    <rect x="20" y="24" width="28" height="12" rx="2" ry="2" fill="#ffffff"/>
+  </g>
+
+  <!-- Text: hospital name -->
+  <text x="92" y="42" class="brand">Bệnh viện 108</text>
+  <text x="92" y="64" class="tag">Chăm sóc sức khỏe — Tin cậy &amp; chuyên nghiệp</text>
+</svg>

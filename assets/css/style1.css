@@ -1,0 +1,387 @@
+* {
+  /* kích thước là của phần tử luôn  */
+  box-sizing: border-box;
+}
+/* tạo biến để khi dùng chỉ cần dùng var */
+:root {
+  --font-heading: "Sen", sans-serif;
+  --primary-color: #ffb900;
+}
+/* 1rem=16px nên cần đổi 1rem=10px cho dễ tính */
+html {
+  font-size: 62.5%;
+}
+/* khôi phục lại cỡ chữ mặc định theo rem */
+body {
+  font-size: 1.6rem;
+  .poppins-regular {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  .poppins-medium {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+  }
+
+  .poppins-semibold {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+  }
+
+  .poppins-bold {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+
+  .poppins-regular-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+  }
+}
+/* bỏ gạch chân  */
+a {
+  text-decoration: none;
+}
+.heading-lv2 {
+  color: #171100;
+  font-family: var(--font-heading);
+  font-size: 3.8rem;
+  font-weight: 700;
+  line-height: 1.27;
+  letter-spacing: -0.76px;
+}
+.btn {
+  /* cần chuyển sang inline-block để thêm padding cho chữ cách viền */
+  display: inline-block;
+  padding: 0 16px;
+  line-height: 50px;
+  color: #fff;
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: 600;
+  border-radius: 999px;
+  background: #171100;
+}
+/* dùng hover khi di qua cho mờ đi chút */
+.btn:hover {
+  opacity: 0.9;
+  cursor: pointer;
+}
+/* căn khoảng cách 2 bên trên trình duyệt */
+.main-content {
+  width: 1170px;
+  /* khi kéo trình duyệt ko bị sát lề hoặc mất chữ */
+  max-width: calc(100% - 48px);
+  margin-left: auto;
+  margin-right: auto;
+}
+.header {
+  background: #fffcf4;
+}
+/* tạo độ dính khi cuộn */
+.header.fixed {
+  position: sticky;
+  top: -28px;
+}
+/* dàn ngang */
+.header .body {
+  display: flex;
+  /* căn giữa cả hàng theo trục ngang */
+  align-items: center;
+  padding: 36px 0 8px;
+}
+/* kéo sang bên phải của khối header */
+.nav {
+  margin-left: auto;
+}
+/* dàn ngang của khối con nav ul */
+.nav ul {
+  display: flex;
+}
+.nav a {
+  /* định vị theo tổ tiên gần nhất possition */
+  position: relative;
+  color: #5f5b53;
+  font-size: 1.6rem;
+  padding: 8px 21px;
+}
+/* hover khi di chuột qua tạo sự khác */
+.nav a:hover {
+  color: #171100;
+  font-weight: 600;
+}
+.header .btn-sign-up {
+  min-width: 144px;
+}
+/* khoảng cách nút đăng ký với liên hệ */
+.header .action {
+  margin-left: 49px;
+}
+.fa-youtube {
+  color: #f00;
+}
+/* hero -----------------------------------------------------------------*/
+.hero {
+  padding: 56px;
+  background: #fffcf4;
+}
+.hero .body {
+  display: flex;
+}
+.hero .media-block {
+  width: 46%;
+}
+.hero .content-block {
+  width: 52%;
+  padding-left: 130px;
+  padding-top: 64px;
+}
+.hero .media-block .img {
+  width: 470px;
+  height: 685px;
+  /* dùng object để tránh vỡ ảnh */
+  object-fit: cover;
+  border-radius: 20px;
+}
+.hero .heading {
+  color: #171100;
+  font-family: var(--font-heading);
+  font-size: 5.8rem;
+  font-weight: 700;
+  line-height: 1.17;
+  letter-spacing: -1.16px;
+}
+.hero .desc {
+  color: #5f5b53;
+  margin-top: 22px;
+  font-size: 1.8rem;
+  line-height: 1.67;
+}
+.hero .cta-group {
+  display: flex;
+  align-items: center;
+  margin-top: 38px;
+}
+.hero-cta {
+  min-width: 180px;
+  line-height: 64px;
+  background-color: var(--primary-color);
+}
+.hero .watch-video {
+  border: none;
+  margin-left: 40px;
+  background: transparent;
+  /* display: flex; */
+  cursor: pointer;
+}
+/* popular ---------------------------------------------------------------------- */
+.popular {
+  padding: 40px 0;
+  margin-top: 40px;
+}
+
+.popular-top .desc {
+  margin-top: 16px;
+  width: 458px;
+  color: #5f5b53;
+  font-size: 1.8rem;
+  line-height: 1.67;
+}
+
+.popular .course-list {
+  margin-top: 55px;
+  gap: 30px;
+  display: flex;
+}
+/* chỉnh cho ảnh vào khung của khối, không bị tràn ra ngoài khối */
+.popular .course-item .thumb {
+  border-radius: 12px 12px 0 0;
+  width: 100%;
+}
+
+.popular .course-item .title {
+  color: #171100;
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 1.67;
+}
+
+.popular .course-item .desc {
+  margin-top: 6px;
+}
+/* feedback -------------------------------------------------------------*/
+.feedback {
+  margin-top: 50px;
+  padding: 96px 0;
+  background: #279a428f;
+}
+
+.feedback-item {
+  display: flex;
+}
+
+.feedback-item .avatar {
+  width: 350px;
+}
+
+.info .desc {
+  margin-top: 15px;
+  margin-right: 120px;
+  font-weight: bold;
+}
+
+.feedback-item .content {
+  width: 66%;
+  margin-left: auto;
+  font-weight: bold;
+}
+
+/* features ----------------------------------------------------- */
+.features {
+  padding: 100px 0;
+}
+
+.features .body1 {
+  margin-top: 30px;
+  display: flex;
+}
+
+.body1 .content {
+  width: 66%;
+  margin-left: 100px;
+}
+
+.body1 .images {
+  height: 200px;
+}
+.features .body2 {
+  margin-top: 100px;
+  display: flex;
+  /* sắp xếp phần tử con đảo ngược chiều */
+  flex-direction: row-reverse;
+}
+.features .body3 {
+  display: flex;
+  margin-top: 50px;
+}
+.body2 .content {
+  width: 66%;
+  margin-left: 100px;
+  margin-right: 200px;
+}
+.body3 .content {
+  width: 66%;
+  margin-left: auto;
+}
+
+.features .desc {
+  margin-top: 16px;
+}
+.body .title {
+  font-weight: bold;
+  font-size: 20px;
+  margin-top: 16px;
+}
+
+/* blogs----------------------------------------------------------------- */
+.blogs {
+  margin-top: 50px;
+}
+.blog-list {
+  display: flex;
+  gap: 30px;
+  margin-top: 50px;
+}
+.blog-list .title {
+  font-weight: bold;
+}
+
+.blog-item1 .thumb1 {
+  width: 330px;
+}
+.blog-item2 .thumb2 {
+  width: 315px;
+}
+.blog-item3 .thumb3 {
+  width: 380px;
+}
+.blog-item2 {
+  margin-left: 40px;
+}
+
+/* news --------------------------------------------------------------------------------- */
+.news {
+  margin-top: 100px;
+}
+.new-th {
+  cursor: pointer;
+  display: flex;
+  margin-top: 50px;
+  gap: 30px;
+}
+.new-c1 {
+  display: flex;
+  margin-top: 20px;
+}
+.new-c2 {
+  display: flex;
+  margin-top: 90px;
+}
+.new-c3 {
+  display: flex;
+  margin-top: 20px;
+}
+.new-c4 {
+  display: flex;
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+.new-i {
+  width: 180px;
+  border-radius: 10px;
+}
+.new-th .desc {
+  font-weight: bold;
+}
+.new-th .para {
+  margin-left: 16px;
+}
+.new-right {
+  background: #f4ecec;
+  border-radius: 10px;
+}
+.new-left {
+  background: #f4ecec;
+  border-radius: 10px;
+}
+
+/* footer ------------------------------------------------------------------------------------------ */
+.footer {
+  margin-top: 150px;
+  background: #dde0dd;
+}
+.footer .row {
+  display: flex;
+}
+.row .desc {
+  margin-top: 20px;
+  /* margin-right: 260px; */
+}
+.kn-h2 {
+  font-weight: bold;
+  margin-top: 20px;
+}
+.row .row-right {
+  margin-right: 50px;
+}
+.row .row-left {
+  margin-right: 220px;
+  /* background: #000; */
+  width: 600px;
+}

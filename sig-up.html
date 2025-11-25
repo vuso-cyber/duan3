@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Đặt lịch khám bệnh</title>
+    <link rel="stylesheet" href="style2.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>🩺 Đăng ký khám bệnh</h1>
+      <form action="#" method="post">
+        <div class="form-group">
+          <label for="name">Họ và tên</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Nhập họ và tên"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="phone">Số điện thoại</label>
+          <input
+            type="tel"
+            id="phone"
+            name="phone"
+            placeholder="Nhập số điện thoại"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="department">Khoa</label>
+          <select id="department" name="department" required>
+            <option value="">-- Chọn khoa --</option>
+            <option>Khám tổng quát</option>
+            <option>Nhi</option>
+            <option>Tim mạch</option>
+            <option>Sản - Phụ khoa</option>
+            <option>Da liễu</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="doctor">Bác sĩ (không bắt buộc)</label>
+          <input
+            type="text"
+            id="doctor"
+            name="doctor"
+            placeholder="Nhập tên bác sĩ (nếu có)"
+          />
+        </div>
+
+        <div class="form-inline">
+          <div class="form-group">
+            <label for="date">Ngày khám</label>
+            <input type="date" id="date" name="date" required />
+          </div>
+
+          <div class="form-group">
+            <label for="time">Giờ khám</label>
+            <input type="time" id="time" name="time" required />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="note">Triệu chứng / Ghi chú</label>
+          <textarea
+            id="note"
+            name="note"
+            rows="3"
+            placeholder="Nhập triệu chứng hoặc ghi chú thêm..."
+          ></textarea>
+        </div>
+
+        <button type="submit" class="btn">Đặt lịch ngay</button>
+      </form>
+    </div>
+
+    <footer>
+      <p>© 2025 Phòng khám Sức khỏe - Thiết kế bởi Vũ Xuân Sô</p>
+    </footer>
+  </body>
+</html>

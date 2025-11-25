@@ -1,13 +1,583 @@
 <!DOCTYPE html>
 <html lang="vi">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>dự án 3</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="stylesheet" href="style1.css" />
+    <title>Bệnh viện Sonely — Đăng ký khám bệnh trực tuyến</title>
+
+    <!-- Nhúng Font: Google Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <h1>dự án 3c</h1>
-    <h2>sửa lần 1</h2>
-    <h3>sửa lần 4</h3>
+    <!-- HEADER -->
+    <header class="topbar">
+      <div class="nav">
+        <div class="brand">
+          <div class="logo">HV</div>
+          <div>
+            <h1 style="font-size: 14px; margin: 0">BỆNH VIỆN SONELY</h1>
+            <div class="muted" style="font-size: 12px">
+              Chăm sóc sức khỏe - Tin cậy
+            </div>
+          </div>
+        </div>
+
+        <nav>
+          <ul>
+            <li><a href="" class="active">Trang chủ</a></li>
+            <li><a href="">Dịch vụ</a></li>
+            <li><a href="">Bác sĩ</a></li>
+            <li><a href="">Câu chuyện</a></li>
+            <li><a href="">Bài báo</a></li>
+            <li><a href="">Liên hệ</a></li>
+          </ul>
+        </nav>
+
+        <div class="cta">
+          <a class="btn" href="./sig-up.html">Đăng ký khám</a>
+          <a class="btn ghost" href="">Hỗ trợ</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="wrap">
+      <!-- HERO -->
+      <section class="hero">
+        <div
+          class="carousel"
+          aria-roledescription="carousel"
+          aria-label="Ảnh giới thiệu bệnh viện"
+        >
+          <div class="slides" id="slides">
+            <figure
+              class="slide"
+              style="background-image: url(./assets/img/dep-1.jpg)"
+            >
+              <div class="overlay">
+                <h2 id="heroTitle">Chăm sóc tận tâm — Công nghệ hiện đại</h2>
+                <p>
+                  Đặt lịch khám nhanh, theo dõi trực tuyến, và đội ngũ chuyên
+                  môn hàng đầu.
+                </p>
+              </div>
+            </figure>
+
+            <figure
+              class="slide"
+              style="background-image: url(./assets/img/dv-2.jpg)"
+            >
+              <div class="overlay">
+                <h2>Phòng khám đa khoa — An toàn và sạch sẽ</h2>
+                <p>Quy trình xét nghiệm nhanh chóng, kết quả chính xác.</p>
+              </div>
+            </figure>
+
+            <figure
+              class="slide"
+              style="background-image: url(./assets/img/dv-3.jpg)"
+            >
+              <div class="overlay">
+                <h2>Chu đáo từ A đến Z</h2>
+                <p>
+                  Hỗ trợ tư vấn 24/7, hướng dẫn thủ tục, và chăm sóc sau khám.
+                </p>
+              </div>
+            </figure>
+          </div>
+
+          <div class="dots" id="dots" aria-hidden="false">
+            <div class="dot active" data-index="0" aria-label="slide 1"></div>
+            <div class="dot" data-index="1" aria-label="slide 2"></div>
+            <div class="dot" data-index="2" aria-label="slide 3"></div>
+          </div>
+        </div>
+
+        <!-- SIGNUP -->
+        <aside class="signup" id="register" aria-labelledby="signupTitle">
+          <h3 id="signupTitle">Đăng ký khám nhanh</h3>
+          <p class="lead">
+            Chọn khoa, bác sĩ, và thời gian — chúng tôi sẽ liên hệ xác nhận.
+          </p>
+
+          <form>
+            <div class="form-row">
+              <div class="field">
+                <label for="name" style="font-size: 13px; color: var(--muted)"
+                  >Họ & tên</label
+                >
+                <input id="name" required placeholder="Nguyễn Văn A" />
+              </div>
+              <div class="field">
+                <label for="dob" style="font-size: 13px; color: var(--muted)"
+                  >Ngày sinh</label
+                >
+                <input id="dob" type="date" />
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="field">
+                <label for="dept" style="font-size: 13px; color: var(--muted)"
+                  >Khoa</label
+                >
+                <select id="dept" required>
+                  <option value="">-- Chọn khoa --</option>
+                  <option>Khám tổng quát</option>
+                  <option>Nội - Tiêu hóa</option>
+                  <option>Tim mạch</option>
+                  <option>Sản phụ khoa</option>
+                  <option>Nhi khoa</option>
+                  <option>Răng - Hàm - Mặt</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="time" style="font-size: 13px; color: var(--muted)"
+                  >Thời gian dự kiến</label
+                >
+                <select id="time">
+                  <option>Trong ngày</option>
+                  <option>Ngày mai</option>
+                  <option>Tuần này</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-actions">
+              <button class="btn" type="submit">Gửi đăng ký</button>
+              <button class="btn ghost" type="reset">Làm mới</button>
+            </div>
+
+            <div
+              id="signupNote"
+              class="muted"
+              style="margin-top: 10px; font-size: 13px"
+            >
+              Chúng tôi sẽ gọi lại để xác nhận lịch trong vòng 24 giờ.
+            </div>
+          </form>
+        </aside>
+      </section>
+
+      <!-- INTRO SLIDER (lướt sang giới thiệu về bệnh viện) -->
+      <section aria-labelledby="aboutTitle">
+        <div class="section-title">
+          <h2 id="aboutTitle">Giới thiệu bệnh viện</h2>
+          <div class="lead">
+            Hành trình chăm sóc sức khỏe — tôn chỉ, sứ mệnh và tầm nhìn.
+          </div>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1fr 360px; gap: 18px">
+          <div
+            style="
+              background: var(--card);
+              border-radius: 12px;
+              padding: 18px;
+              box-shadow: 0 8px 28px rgba(12, 18, 40, 0.04);
+            "
+          >
+            <h3>Về chúng tôi</h3>
+            <p class="muted">
+              Bệnh viện Sonely được thành lập năm 2004 với sứ mệnh mang lại dịch
+              vụ y tế chất lượng, an toàn và tận tâm. Chúng tôi kết hợp đội ngũ
+              bác sĩ chuyên môn cao với công nghệ y khoa hiện đại để chăm sóc
+              mọi gia đình.
+            </p>
+
+            <div
+              style="
+                margin-top: 12px;
+                display: flex;
+                gap: 12px;
+                flex-wrap: wrap;
+              "
+            >
+              <div class="pill">An toàn</div>
+              <div class="pill">Chuyên nghiệp</div>
+              <div class="pill">Nhân văn</div>
+            </div>
+          </div>
+
+          <div
+            style="
+              border-radius: 12px;
+              overflow: hidden;
+              box-shadow: 0 8px 28px rgba(12, 18, 40, 0.06);
+            "
+          >
+            <!-- small image slider -->
+            <div id="aboutSlider" style="display: grid; grid-auto-rows: 240px">
+              <img
+                src="./assets/img/dep-3.jpg"
+                alt="Phòng khám sạch sẽ"
+                style="width: 100%; height: 100%; object-fit: cover"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SERVICES -->
+      <section id="services" aria-labelledby="svcTitle">
+        <div class="section-title">
+          <h2 id="svcTitle">Dịch vụ chính</h2>
+          <div class="lead">
+            Các gói khám và dịch vụ y tế phục vụ mọi độ tuổi.
+          </div>
+        </div>
+
+        <div class="services">
+          <article class="service-card" aria-labelledby="s1">
+            <h3 id="s1">Khám tổng quát</h3>
+            <p>
+              Kiểm tra toàn diện: xét nghiệm, siêu âm, đo điện tim, tư vấn
+              chuyên khoa.
+            </p>
+          </article>
+
+          <article class="service-card" aria-labelledby="s2">
+            <h3 id="s2">Khoa Tim mạch</h3>
+            <p>
+              Chẩn đoán và điều trị suy tim, tăng huyết áp, can thiệp tim mạch.
+            </p>
+          </article>
+
+          <article class="service-card" aria-labelledby="s3">
+            <h3 id="s3">Sản - Phụ khoa</h3>
+            <p>Chăm sóc thai kỳ, sinh nở an toàn, theo dõi sau sinh.</p>
+          </article>
+
+          <article class="service-card" aria-labelledby="s4">
+            <h3 id="s4">Nội soi & Tiêu hóa</h3>
+            <p>
+              Tiến hành nội soi chẩn đoán, tầm soát polyp và điều trị chuyên
+              sâu.
+            </p>
+          </article>
+
+          <article class="service-card" aria-labelledby="s5">
+            <h3 id="s5">Xét nghiệm nhanh</h3>
+            <p>Máu, nước tiểu, sinh hóa với kết quả nhanh trong ngày.</p>
+          </article>
+
+          <article class="service-card" aria-labelledby="s6">
+            <h3 id="s6">Chăm sóc sau mổ</h3>
+            <p>Tư vấn phục hồi, theo dõi vết mổ và phục hồi chức năng.</p>
+          </article>
+        </div>
+      </section>
+
+      <!-- QUOTE / LỜI HAY Ý ĐẸP -->
+      <section id="stories" aria-labelledby="storiesTitle">
+        <div class="section-title">
+          <h2 id="storiesTitle">Câu chuyện & Hình ảnh</h2>
+          <div class="lead">Những khoảnh khắc ấm áp, hành trình hồi phục.</div>
+        </div>
+
+        <div class="gallery" role="list">
+          <a
+            class="card-img"
+            href="#"
+            role="listitem"
+            data-src="https://images.unsplash.com/photo-1582719478175-718d4a8d7b0e?q=80&w=1200&auto=format&fit=crop"
+          >
+            <img src="./assets/img/dv-3.jpg" alt="Bệnh nhân vui vẻ" />
+            <span class="card-caption">Khoảnh khắc hạnh phúc</span>
+          </a>
+
+          <a
+            class="card-img"
+            href="#"
+            role="listitem"
+            data-src="https://images.unsplash.com/photo-1580281657526-9f7a9d2a2e20?q=80&w=1200&auto=format&fit=crop"
+          >
+            <img src="./assets/img/doi-ngu-bs.jpg" alt="Nhân viên y tế" />
+            <span class="card-caption">Đội ngũ tận tâm</span>
+          </a>
+
+          <a
+            class="card-img"
+            href="#"
+            role="listitem"
+            data-src="https://images.unsplash.com/photo-1606788075760-2f360f3c6c3e?q=80&w=1200&auto=format&fit=crop"
+          >
+            <img src="./assets/img/dep-3.jpg" alt="Thiết bị y tế" />
+            <span class="card-caption">Công nghệ hiện đại</span>
+          </a>
+
+          <a
+            class="card-img"
+            href="#"
+            role="listitem"
+            data-src="https://images.unsplash.com/photo-1537368910025-700350fe46c7?q=80&w=1200&auto=format&fit=crop"
+          >
+            <img src="./assets/img/anh-dep-bv1.webp" alt="Gặp gỡ bác sĩ" />
+            <span class="card-caption">Hẹn gặp bác sĩ</span>
+          </a>
+        </div>
+      </section>
+
+      <!-- DOCTORS -->
+      <section id="doctors" aria-labelledby="docTitle">
+        <div class="section-title">
+          <h2 id="docTitle">Các bác sĩ giỏi</h2>
+          <div class="lead">Đội ngũ chuyên môn hàng đầu, giàu kinh nghiệm.</div>
+        </div>
+
+        <div class="doctors">
+          <article class="doc" aria-labelledby="d1">
+            <div class="avatar">TS</div>
+            <div>
+              <h4 id="d1">TS. Nguyễn Văn Bằng</h4>
+              <p class="muted">
+                Chuyên khoa Tim mạch — > 20 năm kinh nghiệm, can thiệp tim mạch.
+              </p>
+            </div>
+          </article>
+
+          <article class="doc" aria-labelledby="d2">
+            <div class="avatar">PG</div>
+            <div>
+              <h4 id="d2">PGS. Trần Thị Hồng</h4>
+              <p class="muted">
+                Chuyên khoa Sản phụ khoa — chuyên theo dõi thai kỳ nguy cơ cao.
+              </p>
+            </div>
+          </article>
+
+          <article class="doc" aria-labelledby="d3">
+            <div class="avatar">BS</div>
+            <div>
+              <h4 id="d3">BS. Lê Minh Tuấn</h4>
+              <p class="muted">
+                Chuyên khoa Nội soi — kỹ thuật nội soi ống mềm, điều trị polyp.
+              </p>
+            </div>
+          </article>
+
+          <article class="doc" aria-labelledby="d4">
+            <div class="avatar">PG</div>
+            <div>
+              <h4 id="d4">PGS. Phạm Thị Lan</h4>
+              <p class="muted">
+                Chuyên khoa Nhi — chăm sóc trẻ em sơ sinh và trẻ nhỏ.
+              </p>
+            </div>
+          </article>
+
+          <article class="doc" aria-labelledby="d5">
+            <div class="avatar">TS</div>
+            <div>
+              <h4 id="d5">TS. Hoàng Văn An</h4>
+              <p class="muted">
+                Chuyên khoa Tiêu hóa — chẩn đoán và điều trị bệnh lý phức tạp.
+              </p>
+            </div>
+          </article>
+
+          <article class="doc" aria-labelledby="d6">
+            <div class="avatar">BS</div>
+            <div>
+              <h4 id="d6">BS. Nguyễn Thị Vy</h4>
+              <p class="muted">
+                Chuyên khoa Răng - Hàm - Mặt — thẩm mỹ và phục hồi chức năng.
+              </p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- STORIES / GALLERY -->
+      <section aria-labelledby="quoteTitle">
+        <div class="section-title">
+          <h2 id="quoteTitle">Lời hay ý đẹp</h2>
+          <div class="lead">
+            Những lời nhắn gửi từ bệnh nhân và đội ngũ y bác sĩ.
+          </div>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 18px">
+          <div class="quote">
+            <strong>“Sức khỏe là tài sản lớn nhất”</strong>
+            <p class="muted" style="margin-top: 8px">
+              Hãy thường xuyên kiểm tra sức khỏe và lắng nghe cơ thể — đội ngũ
+              chúng tôi luôn sẵn sàng đồng hành cùng bạn.
+            </p>
+          </div>
+
+          <div class="quote">
+            <strong>“Chăm sóc bằng cả trái tim”</strong>
+            <p class="muted" style="margin-top: 8px">
+              Mỗi bệnh nhân là một câu chuyện — sự tận tâm là giá trị cốt lõi
+              của chúng tôi.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- NEWS / ARTICLES -->
+      <section id="news" aria-labelledby="newsTitle">
+        <div class="section-title">
+          <h2 id="newsTitle">Bài báo & Tin tức</h2>
+          <div class="lead">
+            Cập nhật tin tức y tế, mẹo sức khỏe, thông báo bệnh viện.
+          </div>
+        </div>
+
+        <div class="news-list">
+          <article class="news">
+            <img src="./assets/img/dep-3.jpg" alt="Tin tức 1" />
+            <div class="body">
+              <h4>Gói khám tổng quát giảm giá mùa hè</h4>
+              <p class="muted">
+                Ưu đãi chỉ trong tháng này — đặt lịch ngay để được tư vấn miễn
+                phí.
+              </p>
+            </div>
+          </article>
+
+          <article class="news">
+            <img src="./assets/img/new3.jpg" alt="Tin tức 2" />
+            <div class="body">
+              <h4>Hội thảo phòng ngừa bệnh tim mạch</h4>
+              <p class="muted">
+                Chúng tôi tổ chức buổi chia sẻ miễn phí về cách sống lành mạnh.
+              </p>
+            </div>
+          </article>
+
+          <article class="news">
+            <img src="./assets/img/dv-3.jpg" alt="Tin tức 3" />
+            <div class="body">
+              <h4>Góc chăm sóc sau mổ: Lời khuyên từ chuyên gia</h4>
+              <p class="muted">
+                Các bước chăm sóc để hồi phục nhanh và tránh biến chứng.
+              </p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- CONTACT & INFO -->
+      <section id="contact" aria-labelledby="contactTitle">
+        <div class="section-title">
+          <h2 id="contactTitle">Thông tin liên hệ</h2>
+          <div class="lead">
+            Địa chỉ, số điện thoại, và phương thức liên hệ nhanh.
+          </div>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1fr 360px; gap: 18px">
+          <div
+            style="
+              background: var(--card);
+              padding: 18px;
+              border-radius: 12px;
+              box-shadow: 0 8px 28px rgba(12, 18, 40, 0.04);
+            "
+          >
+            <h3>Liên hệ nhanh</h3>
+            <p class="muted">
+              Địa chỉ: 27 Ngõ 252, Đại Mỗ, Nam Từ Liêm, Hà Nội
+            </p>
+            <p class="muted">Điện thoại: <strong>0358 988 204</strong></p>
+            <p class="muted">Email: <strong>vuso2k1@gmail.com</strong></p>
+
+            <h4 style="margin-top: 12px">Hướng dẫn đến bệnh viện</h4>
+            <ol class="muted" style="padding-left: 18px">
+              <li>Xe bus các tuyến dừng tại ngã tư Đại Mỗ</li>
+              <li>Gửi xe tại bãi trước cổng</li>
+              <li>Tiếp tân ở tầng 1 hỗ trợ hướng dẫn</li>
+            </ol>
+          </div>
+
+          <aside
+            style="
+              background: linear-gradient(180deg, #fff, #fbfdff);
+              padding: 16px;
+              border-radius: 12px;
+              box-shadow: 0 8px 28px rgba(12, 18, 40, 0.04);
+            "
+          >
+            <h3>Giờ làm việc</h3>
+            <p class="muted">
+              <strong>Thứ Hai - Chủ Nhật:</strong> 7:00 - 20:00
+            </p>
+            <p class="muted"><strong>Phòng khám cấp cứu:</strong> 24/7</p>
+
+            <h4 style="margin-top: 12px">Mạng xã hội</h4>
+            <div style="display: flex; gap: 10px; margin-top: 8px">
+              <a class="pill" href="#" aria-label="Facebook">Facebook</a>
+              <a class="pill" href="#" aria-label="YouTube">YouTube</a>
+              <a class="pill" href="#" aria-label="Zalo">Zalo</a>
+            </div>
+          </aside>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer role="contentinfo">
+      <div class="footer-grid">
+        <div class="foot-brand">
+          <h3>Bệnh viện Sonely</h3>
+          <p class="small">Chăm sóc sức khỏe — Uy tín & Thân thiện</p>
+        </div>
+
+        <div>
+          <h4 style="margin: 0 0 8px">Địa chỉ & Liên hệ</h4>
+          <p class="contact">27 Ngõ 252, Đại Mỗ, Nam Từ Liêm, Hà Nội</p>
+          <p class="contact">Hotline: <strong>0358 988 204</strong></p>
+          <p class="contact">Email: vuso2k1@gmail.com</p>
+        </div>
+
+        <div>
+          <h4 style="margin: 0 0 8px">Giờ làm việc</h4>
+          <p class="small">Thứ 2 - Chủ nhật: 07:00 — 20:00</p>
+          <p class="small">Cấp cứu: 24/7</p>
+          <div style="margin-top: 12px">
+            <a class="btn" href="#register">Đặt lịch</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="wrap copyright">
+        <div
+          style="
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+            align-items: center;
+            flex-wrap: wrap;
+          "
+        >
+          <div>
+            © <strong>Bệnh viện Sonely</strong> — Bản quyền 2025. Bảo lưu mọi
+            quyền.
+          </div>
+          <div class="small">
+            Thiết kế & phát triển bởi đội ngũ CNTT bệnh viện.
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- IMAGE MODAL -->
+    <div
+      id="imgModal"
+      class="modal"
+      role="dialog"
+      aria-modal="true"
+      aria-hidden="true"
+    >
+      <div class="close-x" id="closeModal" aria-label="Đóng">&times;</div>
+      <img id="modalImg" src="" alt="Hình phóng to" />
+    </div>
+
+    <script src="./main.js"></script>
   </body>
 </html>
