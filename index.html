@@ -38,7 +38,7 @@
         </nav>
 
         <div class="cta">
-          <a class="btn" href="./sig-up.html">Đăng ký khám</a>
+          <a class="btn" href="./sig-up.html" target="blank">Đăng ký khám</a>
           <a class="btn ghost" href="">Hỗ trợ</a>
         </div>
       </div>
@@ -47,11 +47,7 @@
     <main class="wrap">
       <!-- HERO -->
       <section class="hero">
-        <div
-          class="carousel"
-          aria-roledescription="carousel"
-          aria-label="Ảnh giới thiệu bệnh viện"
-        >
+        <div class="content">
           <div class="slides" id="slides">
             <figure
               class="slide"
@@ -88,15 +84,9 @@
               </div>
             </figure>
           </div>
-
-          <div class="dots" id="dots" aria-hidden="false">
-            <div class="dot active" data-index="0" aria-label="slide 1"></div>
-            <div class="dot" data-index="1" aria-label="slide 2"></div>
-            <div class="dot" data-index="2" aria-label="slide 3"></div>
-          </div>
         </div>
 
-        <!-- SIGNUP -->
+        <!-- SIGNUP ----------------------------------------------------------------------------------------------------------------------------------------- -->
         <aside class="signup" id="register" aria-labelledby="signupTitle">
           <h3 id="signupTitle">Đăng ký khám nhanh</h3>
           <p class="lead">
@@ -188,14 +178,7 @@
               mọi gia đình.
             </p>
 
-            <div
-              style="
-                margin-top: 12px;
-                display: flex;
-                gap: 12px;
-                flex-wrap: wrap;
-              "
-            >
+            <div style="margin-top: 12px; display: flex; gap: 12px">
               <div class="pill">An toàn</div>
               <div class="pill">Chuyên nghiệp</div>
               <div class="pill">Nhân văn</div>
@@ -209,7 +192,7 @@
               box-shadow: 0 8px 28px rgba(12, 18, 40, 0.06);
             "
           >
-            <!-- small image slider -->
+            <!-- img -->
             <div id="aboutSlider" style="display: grid; grid-auto-rows: 240px">
               <img
                 src="./assets/img/dep-3.jpg"
@@ -272,13 +255,13 @@
       </section>
 
       <!-- QUOTE / LỜI HAY Ý ĐẸP -->
-      <section id="stories" aria-labelledby="storiesTitle">
+      <section id="stories">
         <div class="section-title">
           <h2 id="storiesTitle">Câu chuyện & Hình ảnh</h2>
           <div class="lead">Những khoảnh khắc ấm áp, hành trình hồi phục.</div>
         </div>
 
-        <div class="gallery" role="list">
+        <div class="gallery">
           <a
             class="card-img"
             href="#"
@@ -322,34 +305,34 @@
       </section>
 
       <!-- DOCTORS -->
-      <section id="doctors" aria-labelledby="docTitle">
+      <section id="doctors">
         <div class="section-title">
           <h2 id="docTitle">Các bác sĩ giỏi</h2>
           <div class="lead">Đội ngũ chuyên môn hàng đầu, giàu kinh nghiệm.</div>
         </div>
 
         <div class="doctors">
-          <article class="doc" aria-labelledby="d1">
+          <article class="doc">
             <div class="avatar">TS</div>
             <div>
-              <h4 id="d1">TS. Nguyễn Văn Bằng</h4>
+              <h4 id="d1">TS. Nguyễn Văn Đại</h4>
               <p class="muted">
                 Chuyên khoa Tim mạch — > 20 năm kinh nghiệm, can thiệp tim mạch.
               </p>
             </div>
           </article>
 
-          <article class="doc" aria-labelledby="d2">
+          <article class="doc">
             <div class="avatar">PG</div>
             <div>
-              <h4 id="d2">PGS. Trần Thị Hồng</h4>
+              <h4 id="d2">PGS. Trần Thị Tuyết</h4>
               <p class="muted">
                 Chuyên khoa Sản phụ khoa — chuyên theo dõi thai kỳ nguy cơ cao.
               </p>
             </div>
           </article>
 
-          <article class="doc" aria-labelledby="d3">
+          <article class="doc">
             <div class="avatar">BS</div>
             <div>
               <h4 id="d3">BS. Lê Minh Tuấn</h4>
@@ -359,7 +342,7 @@
             </div>
           </article>
 
-          <article class="doc" aria-labelledby="d4">
+          <article class="doc">
             <div class="avatar">PG</div>
             <div>
               <h4 id="d4">PGS. Phạm Thị Lan</h4>
@@ -369,7 +352,7 @@
             </div>
           </article>
 
-          <article class="doc" aria-labelledby="d5">
+          <article class="doc">
             <div class="avatar">TS</div>
             <div>
               <h4 id="d5">TS. Hoàng Văn An</h4>
@@ -379,10 +362,10 @@
             </div>
           </article>
 
-          <article class="doc" aria-labelledby="d6">
+          <article class="doc">
             <div class="avatar">BS</div>
             <div>
-              <h4 id="d6">BS. Nguyễn Thị Vy</h4>
+              <h4 id="d6">BS. Nguyễn Thị Phượng</h4>
               <p class="muted">
                 Chuyên khoa Răng - Hàm - Mặt — thẩm mỹ và phục hồi chức năng.
               </p>
@@ -392,7 +375,7 @@
       </section>
 
       <!-- STORIES / GALLERY -->
-      <section aria-labelledby="quoteTitle">
+      <section>
         <div class="section-title">
           <h2 id="quoteTitle">Lời hay ý đẹp</h2>
           <div class="lead">
@@ -400,7 +383,7 @@
           </div>
         </div>
 
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 18px">
+        <div style="display: grid; gap: 18px">
           <div class="quote">
             <strong>“Sức khỏe là tài sản lớn nhất”</strong>
             <p class="muted" style="margin-top: 8px">
@@ -420,7 +403,7 @@
       </section>
 
       <!-- NEWS / ARTICLES -->
-      <section id="news" aria-labelledby="newsTitle">
+      <section id="news">
         <div class="section-title">
           <h2 id="newsTitle">Bài báo & Tin tức</h2>
           <div class="lead">
@@ -463,7 +446,7 @@
       </section>
 
       <!-- CONTACT & INFO -->
-      <section id="contact" aria-labelledby="contactTitle">
+      <section id="contact">
         <div class="section-title">
           <h2 id="contactTitle">Thông tin liên hệ</h2>
           <div class="lead">
@@ -471,7 +454,7 @@
           </div>
         </div>
 
-        <div style="display: grid; grid-template-columns: 1fr 360px; gap: 18px">
+        <div style="display: grid; gap: 18px">
           <div
             style="
               background: var(--card);
@@ -511,9 +494,9 @@
 
             <h4 style="margin-top: 12px">Mạng xã hội</h4>
             <div style="display: flex; gap: 10px; margin-top: 8px">
-              <a class="pill" href="#" aria-label="Facebook">Facebook</a>
-              <a class="pill" href="#" aria-label="YouTube">YouTube</a>
-              <a class="pill" href="#" aria-label="Zalo">Zalo</a>
+              <a class="pill" href="#">Facebook</a>
+              <a class="pill" href="#">YouTube</a>
+              <a class="pill" href="#">Zalo</a>
             </div>
           </aside>
         </div>
@@ -556,8 +539,10 @@
           "
         >
           <div>
-            © <strong>Bệnh viện Sonely</strong> — Bản quyền 2025. Bảo lưu mọi
-            quyền.
+            © <strong>Bệnh viện Sonely</strong> — Bản quyền 2025. Mọi hình ảnh
+            trong trang Web được lấy tại trang chủ bênh viện Trung ương Quân đội
+            108. Mọi thắc mắc về bản quyền cần gỡ bỏ xin liên hệ
+            gmail:vuso2k1@gmail.com. Trân trọng cảm ơn!
           </div>
           <div class="small">
             Thiết kế & phát triển bởi đội ngũ CNTT bệnh viện.
@@ -574,7 +559,7 @@
       aria-modal="true"
       aria-hidden="true"
     >
-      <div class="close-x" id="closeModal" aria-label="Đóng">&times;</div>
+      <div class="close-x" id="closeModal">&times;</div>
       <img id="modalImg" src="" alt="Hình phóng to" />
     </div>
 

@@ -21,18 +21,12 @@ body {
     "Helvetica Neue", Arial;
   background: linear-gradient(180deg, #f9fbff 0%, var(--bg) 100%);
   color: #0f1724;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  /* khoảng cách các dòng */
   line-height: 1.45;
 }
 
 a {
-  color: inherit;
   text-decoration: none;
-}
-img {
-  max-width: 100%;
-  display: block;
 }
 
 /* Container */
@@ -44,16 +38,16 @@ img {
 
 /* Header / Nav */
 header.topbar {
+  /* thanh ko trôi */
   position: sticky;
   top: 0;
   z-index: 60;
   background: rgba(255, 255, 255, 0.85);
-  backdrop-filter: blur(6px);
-  box-shadow: 0 6px 18px rgba(12, 15, 20, 0.06);
 }
 .nav {
   display: flex;
   align-items: center;
+  /* khoảng cách nut đăng ký */
   justify-content: space-between;
   gap: 12px;
   max-width: var(--max-width);
@@ -76,7 +70,6 @@ header.topbar {
   justify-content: center;
   font-weight: 700;
   font-size: 18px;
-  box-shadow: 0 3px 10px rgba(11, 110, 253, 0.18);
 }
 .brand h1 {
   font-size: 16px;
@@ -129,8 +122,11 @@ nav a.active {
   gap: 28px;
   align-items: center;
 }
+
+/* tự thay đổi giao diện để phù hợp với các thiết bị */
 @media (max-width: 980px) {
   .hero {
+    /* điện thoại là 1 cột */
     grid-template-columns: 1fr;
     padding-bottom: 6px;
   }
@@ -138,7 +134,7 @@ nav a.active {
     padding: 10px;
   }
 }
-.carousel {
+.content {
   position: relative;
   border-radius: 16px;
   overflow: hidden;
@@ -157,11 +153,13 @@ nav a.active {
   color: white;
   padding: 28px;
   background-size: cover;
+  /* căn chỉnh ảnh nền cho đúng vị trí mong muốn */
   background-position: center;
 }
 .slide .overlay {
   width: 100%;
   padding: 22px;
+  /* chuyển màu từ xanh- hồn, theo hướng từ trái sang phải */
   background: linear-gradient(
     180deg,
     rgba(0, 0, 0, 0) 0%,
@@ -173,6 +171,7 @@ nav a.active {
 .slide h2 {
   margin: 0 0 6px;
   font-size: 26px;
+  /* khoảng cách giữa các ký tự */
   letter-spacing: -0.3px;
 }
 .slide p {
@@ -180,13 +179,6 @@ nav a.active {
   color: rgba(255, 255, 255, 0.92);
 }
 
-.carousel .dots {
-  position: absolute;
-  left: 16px;
-  bottom: 16px;
-  display: flex;
-  gap: 8px;
-}
 .dot {
   width: 10px;
   height: 10px;
@@ -293,6 +285,7 @@ section {
 }
 @media (max-width: 980px) {
   .doctors {
+    /* laptop 2, phone 1 */
     grid-template-columns: repeat(2, 1fr);
   }
 }
