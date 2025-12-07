@@ -47,7 +47,7 @@ header.topbar {
 .nav {
   display: flex;
   align-items: center;
-  /* khoảng cách nut đăng ký */
+  /* khoảng cách nút đăng ký */
   justify-content: space-between;
   gap: 12px;
   max-width: var(--max-width);
